@@ -64,7 +64,8 @@
     "text-table": "^0.2.0",
     "update-notifier": "^2.3.0",
     "user-home": "^2.0.0",
-    "which": "^1.2.14"
+    "which": "^1.2.14",
+    "snyk": "^1.316.1"
   },
   "description": "The linting tool for the web",
   "devDependencies": {
@@ -188,7 +189,10 @@
     "watch": "npm run build && npm-run-all --parallel -c watch:*",
     "watch:resources": "npm run build:assets -- -w --no-initial",
     "watch:test": "ava --watch",
-    "watch:ts": "npm run build:ts -- --watch"
+    "watch:ts": "npm run build:ts -- --watch",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
-  "version": "0.14.1"
+  "version": "0.14.1",
+  "snyk": true
 }
